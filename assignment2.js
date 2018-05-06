@@ -171,7 +171,7 @@ console.log(findStr("d", "daodoaoaoaoao"));
 
 // function selfDividingNumbers(left,right){
 
-// 	return...
+// 	return if (true,false)
 // 	var myArray=[left,right];
 // 	for(var i= left;i<=right;i++)
 // 		// check if i is selfdividing number,this will call functions
@@ -184,4 +184,8 @@ console.log(findStr("d", "daodoaoaoaoao"));
 // // return true if the given number is selfdividing
 // // return false if the given number is not selfdividing
 
-// console.log(selfDividingNumbers(3,12)
+ console.log(selfDividingNumbers(1,12));
+console.log(selfDividingNumbers(1,25));
+console.log(selfDividingNumbers(1,35));
+
+					
