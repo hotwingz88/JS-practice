@@ -1,10 +1,9 @@
 // Question 1
 
 function printInt(n){
-	var i = 1;
-	while(i < n) {
-		console.log(i);
-		i++;
+	for(var i = 1,i<=n;i++){
+	console.log(i);
+		
 	}
 }
 
@@ -15,35 +14,43 @@ function printInt(n){
 // Question 2
 
 function printIntRev(n){
-	while(n > 1){
-		console.log(n);
-		n--;
+	for(var i=n;i>=1;i++)
+		console.log(i);
+		
 	}	
 	
-}
+}();
+
+//printIntRev(10)
 
 // Question 3
  function checkInput(x){
  	// check if x is a number or a string or a boolean
- 	if(typeof x == 'number'){
- 		return 'number';
- 	} else if (typeof x == 'string') {
- 		return 'string';
- 	} else if (typeof x == 'boolean') {
- 		return 'boolean';
- 	} else if (typeof x == Otherwise) {
- 		return -1;
- 	}
+//  	if(typeof x == 'number'){
+//  		return 'number';
+//  	} else if (typeof x == 'string') {
+//  		return 'string';
+//  	} else if (typeof x == 'boolean') {
+//  		return 'boolean';
+//  	} else if (typeof x == Otherwise) {
+//  		return -1;
+//  	}
+	 var type = typeof x;
+	 if (type == 'number' || type == 'string' || type == 'boolean') {
+		 return type
+		 if else {
+			 return -1;
 
- }
+//  }
  // console.log(checkInput([1,2,3]))
 
  // Question 4
 
  function SimpleEvenAdding(num){
-	var i = 2;
-	var answer = 0;
-	while(i <= num){
+	 //simple adding
+	var result = 0;
+	for (var i= 1; i <= num; i++){
+		if(1 % 2 == 0) {
 		answer += i;
 		i +=2;
 		
@@ -57,6 +64,18 @@ function printIntRev(n){
 // Question 5
 
 function letterCapitalize(str){
+	var splittedArray = str.split(" ")
+	
+	var newString = "";
+	
+	for(var i=0;i<splitedArray.length;i++){
+		Console.log(splitedarray[i][0].toUpperCase() + splitedArray[i].slice(1));
+	}
+	
+	return newString.slice(1);
+	
+	splitedArray
+			    
 	// "hello world";
 	//  return "hello world".split('');
 
@@ -67,59 +86,29 @@ function letterCapitalize(str){
 
 // console.log(letterCapitalize(33));
 
-// Question 6
+Question 6
 
-// function simpleReverse(str){
-// 	// return ["dlrow", "olleh"].reverse();
-// 	str
-// }	
+function simpleReverse(str){
+	var myArray = str.split("").reverse();
+	var newString ="";
+	for(var i=0; i< myArray.length; i++) {
+		newString += myArray[i];			
+}	
+return newString;
+	return str.split("").reverse().join('');
+}
 
-// console.log(simpleReverse("I Hate Code"));
-
-
-// function test(str){
-// 	return "bye";
-// 	console.log(str);
-	
-// }
-
-// // document.write(test("hello"));
-
-// // console.log(test("hello"));
-
-// console.log(test("hello"));
-// // console.log("bye");
+console.log(simpleReverse("welcome"))
 
 // Question 7
 
 // function findDiff(arr){
-	
-// 	return (Math.max - Math.min);
+	if(arr.length==0){
+		return 0;
 // }
 
-// findDiff([1,2,4,6,21,3]);
-
-// findDiff([1,2,4,6,20,3]);
-
-// findDiff([1,2,4,6,19,3]);
-// // Math.min([1,2,4,6,20, 3]);
-
-
-// // console.log(Math.max(1,2,4,6,20, 3));
-// // console.log(Math.min(20-1));
-// // console.log(Math.min(24-22));
-// // console.log(Math.min(1-1));
-// // console.log(Math.min(1));
-// // console.log(Math.min(0));
-
-//  // console.log(Math.max.apply(null,[1,2,3,4,5]));
-
-// // console.log(Math.max(1, 3123, 1232  ,22312));
-
-// console.log(Math.max(34, 2, 1));
-
-// console.log(Math.min(1, 2, 34));
-
+var max = Math.max.apply(null,arr)
+var min = Math.min.apply(null,arr)
 // Question 8
 
 // function timeConvert(num){
@@ -143,28 +132,36 @@ function letterCapitalize(str){
 
 function findStr(str, long){
 	// var myArray = long.split("");
-	// var c = 0;
+	// var counter = 0;
 	// //loop through the array
 	// for(var i=0;i<myArray.length;i++){
 	// 	if(myArray[i] == str){
-	// 		c++;
+	// 		counter++;
 	// 	}
 	// }
-	var c =0
+	var counter =0
 	for(var i=0; i<= long.length - str.length; i++) {
 
 		if(long.slice(i,i + str.length) == str){
-			c++;
+			counter++;
 		}
 	}
 	
-	return c;
+// 	return counter;
+// 	for(var i =0;str.length + i <= long.length;i++) {
+// 		if(long.slice(i,str.length + i) === str) {
+// 		   counter++;
+// 		}
 
+// }
+// return counter;
+
+	return long.split(str).length - 1
 }
+		
+ console.log(findStr("gh","gdhgdfjgheghghfjkhgerghigh"));
 
- // console.log(findStr("gh","gdhgdfjgheghghfjkhgerghigh"));
-
-console.log(findStr("d", "daodoaoaoaoao"));
+// console.log(findStr("d", "daodoaoaoaoao"));
 
 
 // Question 10
@@ -179,11 +176,24 @@ console.log(findStr("d", "daodoaoaoaoao"));
 // 			myArr.push(i);
 // 		}
 // 	}
-// return myArr;
+// return myArray;{
 // // is given number is selfdividing
 // // return true if the given number is selfdividing
 // // return false if the given number is not selfdividing
-
+}
+	 
+function isSelfDividing(num){
+	// split num into digits
+	num.toString() = num.split("")
+	// use num / each digit to check if they are divisible
+	for(let i = 0;i<myArray.length;i++){
+	    if(num % parseInt(myArray[i]) != 0){
+		    return false;
+	    }
+	}
+	
+	return true;	
+}
  console.log(selfDividingNumbers(1,12));
 console.log(selfDividingNumbers(1,25));
 console.log(selfDividingNumbers(1,35));
