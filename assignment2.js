@@ -103,6 +103,16 @@ console.log(simpleReverse("welcome"))
 // Question 7
 
 // function findDiff(arr){
+	 
+	 var max = 0;
+	 var min = 999999999;
+	 for (var i = 0; i< arr.length; i++){
+	      if(arr[i]>max){
+		 max = arr[i];
+	      }
+		 
+	      if(arr[i],min){
+		  min=arr[i];
 	if(arr.length==0){
 		return 0;
 // }
